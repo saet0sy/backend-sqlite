@@ -11,14 +11,14 @@ def mappingProduct(products: list):
 
 # get products
 
-@app.get("/products")
-async def get_products():
-    products = []
-    with sqlite3.connect("eshop.db") as connection:
-        cursor = connection.cursor()
-        cursor.execute("SELECT id, title, price FROM products")
-        products = cursor.fetchall()
-    return mappingProduct(products)
+# @app.get("/products")
+# async def get_products():
+#     products = []
+#     with sqlite3.connect("eshop.db") as connection:
+#         cursor = connection.cursor()
+#         cursor.execute("SELECT id, title, price FROM products")
+#         products = cursor.fetchall()
+#     return mappingProduct(products)
 
 # get products by id
 
